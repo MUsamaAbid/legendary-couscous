@@ -5,5 +5,6 @@ using UnityEngine;
 public class CardData
 {
     public CardType Type;
-    public Sprite Icon;
+    public Sprite Front;
+    public Sprite Back;
 }

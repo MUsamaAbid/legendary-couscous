@@ -1,5 +1,7 @@
 public enum CardType
 {
-    Parrot,
-    Eagle
+    Q,
+    K,
+    J,
+    A
 }

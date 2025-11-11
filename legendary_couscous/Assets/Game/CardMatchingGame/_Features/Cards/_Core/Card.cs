@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private SpriteRenderer FrontSpriteRenderer;
+    [SerializeField] private SpriteRenderer BackSpriteRenderer;
+    public CardType CardType { get; private set; }
+
+    private bool _isActive = false;
+    public bool IsRevealed => _isActive;
+
+    public void Init(CardType cardType, Sprite FrontSprite, Sprite BackSprite)
     {
+        CardType = cardType;
+        FrontSpriteRenderer.sprite = FrontSprite;
         
+        BackSpriteRenderer.sprite = BackSprite;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Reveal()
     {
-        
+        _isActive = true;
+        //Do Revealing animation
+        //On Action Back change it to
+        // _isActive = false;
     }
 }
